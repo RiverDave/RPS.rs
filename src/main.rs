@@ -48,7 +48,6 @@ impl Player {
             let mut rng = rand::thread_rng();
             result = rng.gen_range(1..4);
         } else {
-
             println!("---------------------------");
             println!("Hi! {}: Please choose an option: ", self.name);
             //prompt the user for input
@@ -58,7 +57,7 @@ impl Player {
                 .read_line(&mut input)
                 .expect("Failed to read line");
 
-            result = input.trim().parse().expect("Please type a number!");
+            result = input.trim().parse().expect("You should type a number as listed above!");
         }
         // i need to store the result of the match in a variable in the struct
 
