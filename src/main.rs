@@ -88,6 +88,8 @@ fn main() {
     let mut player1: Player = Player::new(String::from("p1"));
     let mut player2: Player = Player::new(String::from("p2"));
 
+    player1.set_draw(Draw::RpsRock);
+    player2.set_draw(Draw::RpsScissors);
 
     let result = process_winner(player1, player2);
     println!("result: {}", result);
